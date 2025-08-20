@@ -1,0 +1,94 @@
+{
+  "title":"Glow by Moni",
+ "meta": {
+    "description": "Centro de estética y bienestar con los mejores tratamientos de belleza y cuidado personal"
+  },
+  "navbar": {
+    "services": "Servicios",
+    "pricing": "Precios",
+    "about": "Nosotros",
+    "testimonials": "Testimonios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Tu belleza natural, realzada",
+    "subtitle": "Descubre los tratamientos de estética más avanzados en un ambiente relajante y profesional.",
+    "cta": "Descubre nuestros servicios"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Ofrecemos los mejores tratamientos de belleza con tecnología de vanguardia",
+    "facial": {
+      "title": "Tratamientos Faciales",
+      "description": "Rejuvenecimiento y cuidado facial personalizado con productos de primera calidad."
+    },
+    "massage": {
+      "title": "Masajes Relajantes",
+      "description": "Terapias de relajación que alivian el estrés y revitalizan tu cuerpo."
+    },
+    "laser": {
+      "title": "Depilación Láser",
+      "description": "Tecnología avanzada para resultados permanentes y sin dolor."
+    },
+    "spa": {
+      "title": "Tratamientos Spa",
+      "description": "Experiencias completas de bienestar para rejuvenecer cuerpo y mente."
+    },
+    "waxing": {
+      "title": "Depilación",
+      "description": "Técnicas profesionales para una piel suave y sin vello."
+    },
+    "makeup": {
+      "title": "Maquillaje Profesional",
+      "description": "Realza tu belleza natural para ocasiones especiales o el día a día."
+    }
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "description1": "En Belleza Serena nos dedicamos a realzar tu belleza natural mediante tratamientos personalizados y de la más alta calidad. Nuestro equipo de profesionales certificados combina experiencia y tecnología de vanguardia para ofrecerte resultados excepcionales.",
+    "description2": "Desde 2010, hemos ayudado a miles de clientes a sentirse más seguros y radiantes. Nuestro compromiso es proporcionar un servicio excelente en un ambiente relajante y acogedor.",
+    "cta": "Conoce más",
+    "imagePlaceholder": "Imagen del centro de estética"
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "subtitle": "Testimonios reales de personas que han confiado en nosotros",
+    "1": {
+      "name": "María González",
+      "comment": "El tratamiento facial transformó mi piel. Me siento 10 años más joven. ¡Altamente recomendable!"
+    },
+    "2": {
+      "name": "Ana Martínez",
+      "comment": "El personal es increíblemente profesional y el ambiente muy relajante. Volveré sin duda."
+    },
+    "3": {
+      "name": "Carlos Rodríguez",
+      "comment": "Por fin encontré un lugar donde me siento cómodo y obtengo resultados excelentes."
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "¿Tienes preguntas? Estamos aquí para ayudarte. Agenda tu cita hoy mismo.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "message": "Tu mensaje",
+      "submit": "Enviar mensaje"
+    },
+    "successMessage": "¡Gracias por tu mensaje! Te contactaremos pronto."
+  },
+  "footer": {
+    "description": "Tu centro de estética y bienestar de confianza. Ofrecemos tratamientos profesionales para realzar tu belleza natural.",
+    "links": {
+      "title": "Enlaces rápidos"
+    },
+    "contact": {
+      "title": "Contacto",
+      "address": "Av. Principal #123, Ciudad",
+      "phone": "+1 234 567 890",
+      "email": "info@bellezaserena.com",
+      "hours": "Lun-Vie: 9:00 - 19:00, Sáb: 10:00 - 16:00"
+    },
+    "copyright": "Todos los derechos reservados."
+  }
+}

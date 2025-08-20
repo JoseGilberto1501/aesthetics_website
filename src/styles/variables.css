@@ -1,0 +1,23 @@
+:root {
+  /* Colores pastel */
+  --lavender: #E6E6FA;
+  --pink-lavender: #D8BFD8;
+  --pale-pink: #FADADD;
+  --mint-green: #98FF98;
+  --light-peach: #FFDAB9;
+  --pale-lilac: #E6E6FA;
+  --soft-blue: #ADD8E6;
+  --text-color: #5D5D5D;
+  --heading-color: #4A4A4A;
+  
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Bordes */
+  --border-radius: 10px;
+  --border-radius-lg: 20px;
+}

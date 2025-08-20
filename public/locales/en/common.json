@@ -1,0 +1,94 @@
+{
+  "title":"Glow by Moni",
+  "meta": {
+    "description": "Aesthetics and wellness center with the best beauty treatments and personal care"
+  },
+  "navbar": {
+    "services": "Services",
+    "pricing": "Pricing",
+    "about": "About Us",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Your natural beauty, enhanced",
+    "subtitle": "Discover the most advanced aesthetic treatments in a relaxing and professional environment.",
+    "cta": "Discover our services"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer the best beauty treatments with cutting-edge technology",
+    "facial": {
+      "title": "Facial Treatments",
+      "description": "Rejuvenation and personalized facial care with top quality products."
+    },
+    "massage": {
+      "title": "Relaxing Massages",
+      "description": "Relaxation therapies that relieve stress and revitalize your body."
+    },
+    "laser": {
+      "title": "Laser Hair Removal",
+      "description": "Advanced technology for permanent and pain-free results."
+    },
+    "spa": {
+      "title": "Spa Treatments",
+      "description": "Complete wellness experiences to rejuvenate body and mind."
+    },
+    "waxing": {
+      "title": "Waxing",
+      "description": "Professional techniques for smooth, hair-free skin."
+    },
+    "makeup": {
+      "title": "Professional Makeup",
+      "description": "Enhance your natural beauty for special occasions or everyday wear."
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description1": "At Serene Beauty, we are dedicated to enhancing your natural beauty through personalized treatments of the highest quality. Our team of certified professionals combines experience and cutting-edge technology to deliver exceptional results.",
+    "description2": "Since 2010, we have helped thousands of clients feel more confident and radiant. Our commitment is to provide excellent service in a relaxing and welcoming environment.",
+    "cta": "Learn more",
+    "imagePlaceholder": "Aesthetics center image"
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "subtitle": "Real testimonials from people who have trusted us",
+    "1": {
+      "name": "Maria Gonzalez",
+      "comment": "The facial treatment transformed my skin. I feel 10 years younger. Highly recommended!"
+    },
+    "2": {
+      "name": "Ana Martinez",
+      "comment": "The staff is incredibly professional and the atmosphere very relaxing. I will definitely return."
+    },
+    "3": {
+      "name": "Carlos Rodriguez",
+      "comment": "I finally found a place where I feel comfortable and get excellent results."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have questions? We're here to help. Schedule your appointment today.",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "message": "Your message",
+      "submit": "Send message"
+    },
+    "successMessage": "Thank you for your message! We will contact you soon."
+  },
+  "footer": {
+    "description": "Your trusted aesthetics and wellness center. We offer professional treatments to enhance your natural beauty.",
+    "links": {
+      "title": "Quick Links"
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "Main St #123, City",
+      "phone": "+1 234 567 890",
+      "email": "info@serenebeauty.com",
+      "hours": "Mon-Fri: 9:00 - 19:00, Sat: 10:00 - 16:00"
+    },
+    "copyright": "All rights reserved."
+  }
+}
