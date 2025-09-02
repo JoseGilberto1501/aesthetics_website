@@ -1,119 +1,129 @@
-import { useState } from 'react';
-import { useTranslation } from 'next-i18next';
-import {
-  Box,
-  Container,
-  Typography,
-  Grid,
-  TextField,
-  Button,
-  Paper,
-  Alert
-} from '@mui/material';
-import { Send } from '@mui/icons-material';
+import React, { useState } from 'react';
+import styles from '../styles/components/Contact.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faMapMarkerAlt, 
+  faPhone, 
+  faEnvelope, 
+  faClock  
+} from '@fortawesome/free-solid-svg-icons';
+import { 
+  faInstagram, 
+  faFacebookF, 
+  faTiktok, 
+  faWhatsapp  
+} from '@fortawesome/free-brands-svg-icons';
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
-const Contact = () => {
-  const { t } = useTranslation('common');
-  const [formData, setFormData] = useState<FormData>({
+const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Aquí iría la lógica para enviar el formulario
     console.log('Formulario enviado:', formData);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    
-    // Ocultar la alerta después de 5 segundos
-    setTimeout(() => setSubmitted(false), 5000);
+    alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+    setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   return (
-    <Box id="contact" sx={{ py: 10, backgroundColor: 'primary.light' }}>
-      <Container>
-        <Paper elevation={3} sx={{ p: 5, borderRadius: 4 }}>
-          <Typography variant="h3" component="h2" textAlign="center" gutterBottom>
-            {t('contact.title')}
-          </Typography>
-          <Typography variant="subtitle1" textAlign="center" color="text.secondary" sx={{ mb: 4 }}>
-            {t('contact.subtitle')}
-          </Typography>
+    <section className={styles.contact} id="contacto">
+      <div className="container">
+        <h2 className={styles.sectionTitle}>Reserva tu Cita</h2>
+        
+        <div className={styles.contactGrid}>
+          <div className={styles.contactInfo}>
+            <div className={styles.infoSection}>
+              <h3>Horario de Atención</h3>
+              <p><FontAwesomeIcon icon={faClock} /> Lunes a Viernes: 9:00 - 20:00</p>
+              <p><FontAwesomeIcon icon={faClock} /> Sábados: 10:00 - 18:00</p>
+            </div>
+            
+            <div className={styles.infoSection}>
+              <h3>Contacto</h3>
+              <p><FontAwesomeIcon icon={faPhone} /> +506 8558 3579</p>
+              <p><FontAwesomeIcon icon={faEnvelope} /> info@glowbymoniestetica.com</p>
+              <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Costa Rica, Alajuela, Palmitos</p>
+            </div>
+            
+            <div className={styles.infoSection}>
+              <h3>Síguenos</h3>
+              <div className={styles.socialLinks}>
+                <a href="#" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                <a href="#" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+                <a href="#" aria-label="TikTok"><FontAwesomeIcon icon={faTiktok} /></a>
+                <a href="#" aria-label="WhatsApp"><FontAwesomeIcon icon={faWhatsapp} /></a>
+              </div>
+            </div>
+          </div>
           
-          {submitted && (
-            <Alert severity="success" sx={{ mb: 3 }}>
-              {t('contact.successMessage')}
-            </Alert>
-          )}
-          
-          <form onSubmit={handleSubmit}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  label={t('contact.form.name')}
+          <div className={styles.contactForm}>
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <div className={styles.formGroup}>
+                <input
+                  type="text"
                   name="name"
+                  placeholder="Nombre completo"
                   value={formData.name}
                   onChange={handleChange}
-                  variant="outlined"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
                   required
-                  fullWidth
-                  label={t('contact.form.email')}
-                  name="email"
+                  className={styles.formInput}
+                />
+              </div>
+              
+              <div className={styles.formGroup}>
+                <input
                   type="email"
+                  name="email"
+                  placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
-                  variant="outlined"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
                   required
-                  fullWidth
-                  multiline
-                  rows={4}
-                  label={t('contact.form.message')}
+                  className={styles.formInput}
+                />
+              </div>
+              
+              <div className={styles.formGroup}>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Teléfono"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className={styles.formInput}
+                />
+              </div>
+              
+              <div className={styles.formGroup}>
+                <textarea
                   name="message"
+                  placeholder="¿En qué podemos ayudarte?"
                   value={formData.message}
                   onChange={handleChange}
-                  variant="outlined"
-                />
-              </Grid>
-              <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                <Button
-                  type="submit"
-                  variant="contained"
-                  size="large"
-                  endIcon={<Send />}
-                  sx={{ px: 4, py: 1.5, borderRadius: 8 }}
-                >
-                  {t('contact.form.submit')}
-                </Button>
-              </Grid>
-            </Grid>
-          </form>
-        </Paper>
-      </Container>
-    </Box>
+                  required
+                  className={styles.formTextarea}
+                ></textarea>
+              </div>
+              
+              <button type="submit" className={styles.submitBtn}>
+                Enviar mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

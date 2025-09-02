@@ -1,0 +1,102 @@
+.services {
+  background-color: var(--color-light);
+  padding: 80px 0;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.serviceCard {
+  padding: 40px 30px;
+  background-color: var(--color-gray);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.serviceIcon {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+}
+
+.serviceTitle {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.serviceDescription {
+  line-height: 1.6;
+  color: var(--color-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 0;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .serviceCard {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+  
+  .serviceCard {
+    padding: 25px 15px;
+  }
+  
+  .serviceTitle {
+    font-size: 1.3rem;
+  }
+  
+  .serviceIcon {
+    font-size: 2rem;
+  }
+}

@@ -1,68 +1,68 @@
-import { useTranslation } from 'next-i18next';
-import { Box, Container, Typography, Grid, Card, CardContent, Avatar, Rating } from '@mui/material';
+import React from 'react';
+import styles from '../styles/components/Testimonials.module.css';
 
 interface Testimonial {
+  id: number;
   name: string;
-  comment: string;
-  rating: number;
+  text: string;
   avatar: string;
 }
 
-const Testimonials = () => {
-  const { t } = useTranslation('common');
-
+const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-      name: t('testimonials.1.name'),
-      comment: t('testimonials.1.comment'),
-      rating: 5,
-      avatar: '👩'
+      id: 1,
+      name: 'Elena Martínez',
+      text: '"Llevo años confiando en sus tratamientos y siempre obtengo resultados increíbles. Profesionales excelentes y un trato excepcional."',
+      avatar: 'EM'
     },
     {
-      name: t('testimonials.2.name'),
-      comment: t('testimonials.2.comment'),
-      rating: 5,
-      avatar: '👸'
+      id: 2,
+      name: 'Carla Rodríguez',
+      text: '"El lugar perfecto para desconectar y cuidarse. Ambiente relajante y resultados visibles desde la primera sesión. Totalmente recomendable."',
+      avatar: 'CR'
     },
     {
-      name: t('navbar.services'),
-      comment: t('testimonials.3.comment'),
-      rating: 4,
-      avatar: '💃'
+      id: 3,
+      name: 'Sofía López',
+      text: '"Recomiendo totalmente sus servicios. Atención personalizada y tratamientos de primera calidad. He probado varios centros y este es sin duda el mejor."',
+      avatar: 'SL'
     }
   ];
 
   return (
-    <Box id="testimonials" sx={{ py: 10 }}>
-      <Container>
-        <Typography variant="h3" component="h2" textAlign="center" gutterBottom>
-          {t('testimonials.title')}
-        </Typography>
-        <Typography variant="subtitle1" textAlign="center" color="text.secondary" sx={{ mb: 6 }}>
-          {t('testimonials.subtitle')}
-        </Typography>
-        <Grid container spacing={4}>
-          {testimonials.map((testimonial, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Card sx={{ height: '100%' }}>
-                <CardContent sx={{ textAlign: 'center' }}>
-                  <Avatar sx={{ width: 60, height: 60, mx: 'auto', mb: 2, fontSize: '2rem' }}>
-                    {testimonial.avatar}
-                  </Avatar>
-                  <Typography variant="h6" gutterBottom>
-                    {testimonial.name}
-                  </Typography>
-                  <Rating value={testimonial.rating} readOnly sx={{ mb: 2 }} />
-                  <Typography variant="body2" color="text.secondary" fontStyle="italic">
-                    "{testimonial.comment}"
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+    <section className={styles.testimonials} id="testimonios">
+      <div className="container">
+        <h2 className={styles.sectionTitle}>Opiniones de Clientes</h2>
+        <p className={styles.sectionSubtitle}>Descubre lo que nuestros clientes dicen sobre nosotros</p>
+        
+        <div className={styles.testimonialsGrid}>
+          {testimonials.map(testimonial => (
+            <div key={testimonial.id} className={styles.testimonialCard}>
+              <div className={styles.testimonialContent}>
+                <div className={styles.quoteIcon}>
+                  <i className="fas fa-quote-left"></i>
+                </div>
+                <p className={styles.testimonialText}>{testimonial.text}</p>
+              </div>
+              <div className={styles.testimonialAuthor}>
+                <div className={styles.avatar}>
+                  {testimonial.avatar}
+                </div>
+                <div className={styles.authorInfo}>
+                  <h4 className={styles.authorName}>{testimonial.name}</h4>
+                  <div className={styles.rating}>
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className="fas fa-star"></i>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
-        </Grid>
-      </Container>
-    </Box>
+        </div>
+      </div>
+    </section>
   );
 };
 

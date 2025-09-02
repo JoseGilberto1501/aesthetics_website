@@ -1,0 +1,172 @@
+.aboutDoctor {
+  background-color: var(--color-primary);
+  padding: 80px 0;
+}
+
+.aboutDoctorContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.doctorName {
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.doctorDescription {
+  margin-bottom: 2rem;
+}
+
+.doctorDescription p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.doctorQualifications {
+  margin-top: 2rem;
+}
+
+.doctorQualifications h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+}
+
+.qualificationsList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.qualificationsList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.qualificationsList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.doctorImageContainer {
+  position: relative;
+}
+
+.doctorImage {
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.doctorImage:hover .image {
+  transform: scale(1.05);
+}
+
+.imageCaption {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.imageCaption p {
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.imageCaption span {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .aboutDoctorContent {
+    gap: 40px;
+  }
+  
+  .doctorImage {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutDoctor {
+    padding: 60px 0;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .aboutDoctorContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .doctorImage {
+    height: 400px;
+    order: -1;
+  }
+  
+  .doctorName {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+  
+  .doctorImage {
+    height: 350px;
+  }
+  
+  .doctorName {
+    font-size: 1.2rem;
+  }
+  
+  .doctorQualifications h4 {
+    font-size: 1.1rem;
+  }
+}
