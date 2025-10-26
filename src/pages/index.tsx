@@ -20,7 +20,7 @@ export default function Home() {
         <title>{t('title')} - {t('navbar.services')}</title>
         <meta name="description" content={t('meta.description')} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       
       <Header/>

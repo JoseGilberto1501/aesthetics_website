@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             <div className={styles.logoSection}>
               <h3 className={styles.logo}>GLOW BY MONI</h3>
               <p className={styles.logoDescription}>
-                Tu centro de belleza y bienestar en Madrid. Tratamientos premium 
+                Tu centro de belleza y bienestar en Costa Rica. Tratamientos premium 
                 con resultados visibles y atención personalizada.
               </p>
               <div className={styles.paymentMethods}>
